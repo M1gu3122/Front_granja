@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
     inicializarGraficos()
     userManager.cargarUsuarios("activo");
     userManager.cargarUsuarios("inactivo");
-    taskManager.cargarTareas();
-    lotManager.cargarLote()
+    // taskManager.cargarTareas();
+    // lotManager.cargarLote()
     galponManager.cargarGalpones();
     // userManager.cargarUsuariosBan()
     utilManager.mensajeInicio(userInfo);
