@@ -10,34 +10,7 @@ export class GalponManager {
         const formGalpon = document.getElementById("form-addgalpon");
 
 
-        // if (!capacidad) {
-        //     crearAlert("capacidadgal", "capacidad_g", "Debe ingresar la capacida del galpon")
-        //     setTimeout(() => {
-        //         ocultarAlert("capacidad_g");
-        //     }, 3000);
-        //     return;
-        // }
-        // if (isNaN(capacidad) || capacidad < 0) {
-        //     crearAlert("capacidadgal", "capacidad_g", "Este campo debe contener solo números positivos")
-        //     setTimeout(() => {
-        //         ocultarAlert("capacidad_g");
-        //     }, 3000);
-        //     return;
-        // }
-        // if (!numAves) {
-        //     crearAlert("numaves", "numAves", "Debe ingresar el numero de aves del galpón")
-        //     setTimeout(() => {
-        //         ocultarAlert("numAves");
-        //     }, 3000);
-        //     return;
-        // }
-        // if (isNaN(numAves) || numAves < 0) {
-        //     crearAlert("numaves", "numAves", "Este campo debe contener solo números positivos")
-        //     setTimeout(() => {
-        //         ocultarAlert("numAves");
-        //     }, 3000);
-        //     return;
-        // }
+       
         const camposGalpon = [
             {
                 id: "capacidadgal",
@@ -132,36 +105,7 @@ export class GalponManager {
         const capacidad = document.getElementById('edit-capacidad').value;
         const num_aves = document.getElementById('edit-num_aves').value;
 
-        // if (!capacidad) {
-        //     crearAlert("edit-capacidad", "capacidad", "Debe ingresar la capacidad del galpón")
-        //     setTimeout(() => {
-        //         ocultarAlert("capacidad");
-        //     }, 3000);
-
-        //     return;
-        // }
-        // if (isNaN(capacidad) || capacidad < 0) {
-        //     crearAlert("edit-capacidad", "capacidad", "solo se admiten números positivos")
-        //     setTimeout(() => {
-        //         ocultarAlert("capacidad");
-        //     }, 3000);
-
-        //     return;
-        // }
-        // if (!num_aves) {
-        //     crearAlert("edit-num_aves", "num_aves", "Debe ingresar el numero de aves del galpón")
-        //     setTimeout(() => {
-        //         ocultarAlert("num_aves");
-        //     }, 3000);
-        //     return;
-        // }
-        // if (isNaN(num_aves) || num_aves < 0) {
-        //     crearAlert("edit-num_aves", "num_aves", "solo se admiten números positivos")
-        //     setTimeout(() => {
-        //         ocultarAlert("num_aves");
-        //     }, 3000);
-        //     return;
-        // }
+   
         const camposEditarGalpon = [
             {
                 id: "edit-capacidad",
