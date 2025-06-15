@@ -61,7 +61,7 @@ export class UtilManager {
 
         const peticiones = idsSeleccionados.map(id => {
             const data = { estado: "inactivo" };
-            return axios.put(`http://127.0.0.1:3000/user/editar_estado_usuario/${id}`, data, {
+            return axios.put(`https://back-granja.vercel.app/user/editar_estado_usuario/${id}`, data, {
                 headers: { 'Content-Type': 'application/json' }
             });
         });
@@ -102,7 +102,7 @@ export class UtilManager {
 
         const peticiones = idsSeleccionados.map(id => {
             const data = { estado: "activo" };
-            return axios.put(`http://127.0.0.1:3000/user/editar_estado_usuario/${id}`, data, {
+            return axios.put(`https://back-granja.vercel.app/user/editar_estado_usuario/${id}`, data, {
                 headers: { 'Content-Type': 'application/json' }
             });
         });
@@ -217,7 +217,7 @@ export class UtilManager {
         tablaBuscar.classList.add("collapse"); // Oculta la tabla
 
         try {
-            const response = axios.get(`http://127.0.0.1:3000/user/buscar_usuario_tb/${busqueda}`);
+            const response = axios.get(`https://back-granja.vercel.app/user/buscar_usuario_tb/${busqueda}`);
             const userData = response.data;
 
             if (userData.informacion === 'Usuario no encontrado') {
@@ -273,7 +273,7 @@ export class UtilManager {
 
             id_div_buscar.classList.add("collapse");
 
-            axios.get(`http://127.0.0.1:3000/user/buscar_usuario_tb/${busqueda}`, {
+            axios.get(`https://back-granja.vercel.app/user/buscar_usuario_tb/${busqueda}`, {
                 params: { rol: Rol }
             })
                 .then(response => {
