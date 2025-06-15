@@ -7,7 +7,7 @@ export class LotManager {
 
         axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/lotes/obtener_lotes',
+            url: 'https://back-granja.vercel.app/lotes/obtener_lotes',
 
         }).then(function (response) {
 
@@ -118,7 +118,7 @@ export class LotManager {
 
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/lotes/crear_lote',
+                url: 'https://back-granja.vercel.app/lotes/crear_lote',
                 data: {
                     id_galpon: id_galpon,
                     fecha_ingreso: fecha_ingreso,
@@ -271,7 +271,7 @@ export class LotManager {
             // Si todas las validaciones pasan, se procede a actualizar el lote
             axios({
                 method: 'PUT',
-                url: `http://127.0.0.1:3000/lotes/actualizar_lote/${id_lote}`,
+                url: `https://back-granja.vercel.app/lotes/actualizar_lote/${id_lote}`,
                 data: {
                     num_aves: num_aves_lote,
                     fecha_ingreso: fecha_ingreso,
