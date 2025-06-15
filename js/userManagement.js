@@ -23,7 +23,7 @@ export class UserManager {
 
         const id = row.cells[0].innerText;
 
-        axios.get(`http://127.0.0.1:3000/user/obtener_usuario/${id}`, {
+        axios.get(`https://back-granja.vercel.app/user/obtener_usuario/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -62,14 +62,14 @@ export class UserManager {
         const tablaInactivos = $('#table-user-ban').DataTable();
 
         // Cantidad total de usuarios
-        axios.get('http://127.0.0.1:3000/user/total_usuarios')
+        axios.get('https://back-granja.vercel.app/user/total_usuarios')
             .then(response => {
                 document.getElementById('num_usuarios').innerHTML = `${response.data.total} Usuarios Registrados`;
             })
             .catch(err => console.log('Error: ', err));
 
         // Obtener todos los usuarios y llenar ambas tablas
-        axios.get('http://127.0.0.1:3000/user/obtener_usuarios')
+        axios.get('https://back-granja.vercel.app/user/obtener_usuarios')
             .then(response => {
                 tablaActivos.clear();
                 tablaInactivos.clear();
@@ -203,7 +203,7 @@ export class UserManager {
 
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/user/nuevo_usuario', data,
+                url: 'https://back-granja.vercel.app/user/nuevo_usuario', data,
             }).then(function (response) {
                 Swal.fire({
                     title: "Usuario creado con éxito!",
@@ -410,7 +410,7 @@ export class UserManager {
 
 
 
-            axios.put(`http://127.0.0.1:3000/user/editar_usuario/${id}`, data, {
+            axios.put(`https://back-granja.vercel.app/user/editar_usuario/${id}`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                     // 'Authorization': `Bearer ${token}`
