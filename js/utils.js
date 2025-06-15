@@ -170,7 +170,7 @@ export class UtilManager {
         localStorage.removeItem("rol");
 
 
-        window.location.href = "/update_granja/html/login.html";
+        window.location.href = "/html/login.html";
     }
     parseJwt(token) {
         const base64Url = token.split('.')[1]; // Obtener la parte del payload
@@ -338,12 +338,12 @@ export class UtilManager {
         const rol = localStorage.getItem("rol");
 
         if (!token) {
-            window.location.replace = "/update_granja/html/login.html";
+            window.location.replace = "/html/login.html";
             return false;
         }
 
         if (!rolesPermitidos.includes(rol)) {
-            window.location.replace = "/update_granja/html/login.html";
+            window.location.replace = "/html/login.html";
             return false;
         }
 
