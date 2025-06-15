@@ -38,14 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 })
-// document.addEventListener('click', function (event) {
-//     // Usamos una función anónima para asegurarnos de que se pase el botón correcto
-//     const btn = event.target.closest('.btn-edit-report');
-//     if (btn) {
-//         // Llamamos a editarUsuarios con el botón correcto
-//         reportManagement.editReportes(btn );
-//     }
-// });
+
 
 $(document).ready(function () {
     let tabla;
@@ -90,8 +83,7 @@ $(document).ready(function () {
                 }
             });
 
-            // Si quieres hacer la exportación automática a Excel por ejemplo:
-            // tabla.button('.buttons-excel').trigger();
+
         },
         error: function (xhr, status, error) {
             console.error("Error al cargar los datos:", error);
