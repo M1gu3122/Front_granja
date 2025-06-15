@@ -197,7 +197,7 @@ export class UtilManager {
                 Swal.fire({
                     title: "Adiós!",
                     text: "Tu sesión se ha cerrado.",
-                    html: `<img src="/update_granja/img/mano.gif" alt="custom icon" style="width: 100px; height: 100px;">`,
+                    html: `<img src="/img/mano.gif" alt="custom icon" style="width: 100px; height: 100px;">`,
                     showConfirmButton: true,
                     confirmButtonText: "Aceptar",
                     confirmButtonColor: "#28a745"
