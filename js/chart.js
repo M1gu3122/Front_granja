@@ -8,17 +8,40 @@ export const crearGrafico = (ctx, tipo, datos, opciones) => {
 };
 
 // Function to fetch data from the API
+// export const obtenerDatos = (url, callback) => {
+//     fetch(url, {
+//         headers: {
+//             'Content-Type': 'application/json',
+//             // 'Authorization': `Bearer ${token}`
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(datos => callback(datos))
+//     .catch(error => console.log('Error:', error));
+// };
 export const obtenerDatos = (url, callback) => {
     fetch(url, {
         headers: {
             'Content-Type': 'application/json',
-            // 'Authorization': `Bearer ${token}`
         }
     })
-    .then(response => response.json())
-    .then(datos => callback(datos))
-    .catch(error => console.log('Error:', error));
+    .then(response => {
+        if (!response.ok) {
+            console.error(`Error en la respuesta: ${response.status} ${response.statusText}`);
+            return null;  // O un array vacío si prefieres: return [];
+        }
+        return response.json();
+    })
+    .then(datos => {
+        if (datos) {
+            callback(datos);
+        } else {
+            console.warn(`No se procesaron datos para la URL ${url}`);
+        }
+    })
+    .catch(error => console.log('Error de red o fetch:', error));
 };
+
 
 // Function to process users
 export const procesarUsuarios = (data) => {
@@ -70,12 +93,23 @@ export const procesarTareas = (data) => {
 };
 
 // Function to process diagnostics
+// export const procesarDiagnosticos = (data) => {
+//     return {
+//         labels: data.map(item => item.diagnostico),
+//         frecuencias: data.map(item => item.frecuencia)
+//     };
+// };
 export const procesarDiagnosticos = (data) => {
+    if (!Array.isArray(data)) {
+        console.warn("Se esperaba un array en procesarDiagnosticos, recibido:", data);
+        return { labels: [], frecuencias: [] };
+    }
     return {
         labels: data.map(item => item.diagnostico),
         frecuencias: data.map(item => item.frecuencia)
     };
 };
+
 
 // Initialize charts
 export const inicializarGraficos = () => {
