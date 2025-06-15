@@ -35,7 +35,7 @@ const loginAdmin = (event) => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('rol', data.rol);
                 formAdmin.reset();
-                window.location.href = '/update_granja/html/administrador.html';
+                window.location.href = '/html/administrador.html';
             } else {
                 alert("Credenciales Incorrectas o acceso no autorizado");
             }
@@ -74,7 +74,7 @@ const loginTb = (event) => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('rol', data.rol);
                 formTb.reset();
-                window.location.href = '/update_granja/html/trabajador.html';
+                window.location.href = '/html/trabajador.html';
             } else {
                 alert("Credenciales Incorrectas o acceso no autorizado");
             }
@@ -112,7 +112,7 @@ const loginVt = (event) => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('rol', data.rol);
                 formVt.reset();
-                window.location.href = '/update_granja/html/veterinario.html';
+                window.location.href = '/html/veterinario.html';
             } else {
                 alert("Credenciales Incorrectas o acceso no autorizado");
             }
@@ -120,7 +120,7 @@ const loginVt = (event) => {
         .catch(error => console.error('Error en login:', error));
 };
 const mostrarInfo=()=>{
-    window.location.href = '/update_granja/index.html';
+    window.location.href = '/index.html';
 }
 
 // Agregar listeners para los formularios
