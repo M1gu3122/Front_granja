@@ -132,7 +132,7 @@ export class ReportManagement {
             }
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/reportes/crear_reporte',
+                url: 'https://back-granja.vercel.app/reportes/crear_reporte',
                 data,
             }).then(function (response) {
                 Swal.fire({
@@ -157,7 +157,7 @@ export class ReportManagement {
 
         axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/reportes/obtener_reportes',
+            url: 'https://back-granja.vercel.app/reportes/obtener_reportes',
         }).then(function (response) {
             // Check if the DataTable is already initialized
             let tabla;
@@ -224,7 +224,7 @@ export class ReportManagement {
         idUsuarioSeleccionado = id;
 
         // Llamada a Axios para obtener el reporte
-        axios.get(`http://127.0.0.1:3000/reportes/obtener_reporte/${id}`, {
+        axios.get(`https://back-granja.vercel.app/reportes/obtener_reporte/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 // 'Authorization': `Bearer ${token}`
@@ -387,7 +387,7 @@ export class ReportManagement {
             console.log(data)
             axios({
                 method: 'PUT',
-                url: `http://127.0.0.1:3000/reportes/editar_reporte/${id_reporte}`,
+                url: `https://back-granja.vercel.app/reportes/editar_reporte/${id_reporte}`,
                 data,
                 // headers: {
                 //     'Content-Type': 'application/json',
@@ -412,11 +412,7 @@ export class ReportManagement {
                 })
         }
     }
-    ModalVer() {
-
-
-
-    }
+    
 }
 
 
