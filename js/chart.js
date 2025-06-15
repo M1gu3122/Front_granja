@@ -100,7 +100,7 @@ export const inicializarGraficos = () => {
         }]
     }, {});
 
-    obtenerDatos('http://127.0.0.1:3000/user/obtener_usuarios', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/user/obtener_usuarios', (data) => {
         const conteoPorRol = procesarUsuarios(data);
         chartUsuarios.data.labels = Object.keys(conteoPorRol);
         chartUsuarios.data.datasets[0].data = Object.values(conteoPorRol);
@@ -126,7 +126,7 @@ export const inicializarGraficos = () => {
         }
     });
 
-    obtenerDatos('http://127.0.0.1:3000/huevos/total_huevos', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/huevos/total_huevos', (data) => {
         const huevosProcesados = procesarHuevos(data);
         chartHuevos.data.labels = huevosProcesados.map(item => item.fecha);
         chartHuevos.data.datasets[0].data = huevosProcesados.map(item => item.total_huevos);
@@ -152,7 +152,7 @@ export const inicializarGraficos = () => {
         }
     });
 
-    obtenerDatos('http://127.0.0.1:3000/graficos/total_aves_por_galpon', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/graficos/total_aves_por_galpon', (data) => {
         const avesProcesadas = procesarAves(data);
         chartAves.data.labels = avesProcesadas.labels;
         chartAves.data.datasets[0].data = avesProcesadas.data;
@@ -181,7 +181,7 @@ export const inicializarGraficos = () => {
         ]
     }, {});
 
-    obtenerDatos('http://127.0.0.1:3000/graficos/lotes_y_aves_por_galpon', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/graficos/lotes_y_aves_por_galpon', (data) => {
         const lotesAvesProcesados = procesarLotesAves(data);
         chartLotesAves.data.labels = lotesAvesProcesados.labels;
         chartLotesAves.data.datasets[0].data = lotesAvesProcesados.lotes;
@@ -208,7 +208,7 @@ export const inicializarGraficos = () => {
         }
     });
 
-    obtenerDatos('http://127.0.0.1:3000/graficos/tareas_pendientes_por_usuario', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/graficos/tareas_pendientes_por_usuario', (data) => {
         const tareasProcesadas = procesarTareas(data);
         chartTareas.data.labels = tareasProcesadas.labels;
         chartTareas.data.datasets[0].data = tareasProcesadas.tareas;
@@ -234,7 +234,7 @@ export const inicializarGraficos = () => {
         }
     });
 
-    obtenerDatos('http://127.0.0.1:3000/graficos/frecuencia_diagnostico', (data) => {
+    obtenerDatos('https://back-granja.vercel.app/graficos/frecuencia_diagnostico', (data) => {
         const diagnosticosProcesados = procesarDiagnosticos(data);
         chartDiagnosticos.data.labels = diagnosticosProcesados.labels;
         chartDiagnosticos.data.datasets[0].data = diagnosticosProcesados.frecuencias;
