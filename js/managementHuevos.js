@@ -47,7 +47,7 @@ export class ManagementTb {
 
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/huevos/agregar_huevos',
+                url: 'https://back-granja.vercel.app/huevos/agregar_huevos',
                 data: {
                     cantidad: cantidad,
                     fecha: fecha,
@@ -74,7 +74,7 @@ export class ManagementTb {
     }
     cargarHuevos() {
         // const token = localStorage.getItem('token');
-        axios.get('http://127.0.0.1:3000/huevos/obtener_huevos', {
+        axios.get('https://back-granja.vercel.app/huevos/obtener_huevos', {
             headers: {
                 'Content-Type': 'application/json',
                 // 'Authorization': `Bearer ${token}`
