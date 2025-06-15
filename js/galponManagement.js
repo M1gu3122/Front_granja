@@ -43,7 +43,7 @@ export class GalponManager {
 
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/galpones/crear_galpon',
+                url: 'https://back-granja.vercel.app/galpones/crear_galpon',
                 data: {
                     capacidad: capacidad,
                     aves: numAves
@@ -70,7 +70,7 @@ export class GalponManager {
     cargarGalpones() {
         axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/galpones/obtener_galpones',
+            url: 'https://back-granja.vercel.app/galpones/obtener_galpones',
 
         }).then(function (response) {
 
@@ -137,7 +137,7 @@ export class GalponManager {
         
         axios({
             method: 'PUT',
-            url: `http://127.0.0.1:3000/galpones/actualizar_galpon/${id_galpon}`,
+            url: `https://back-granja.vercel.app/galpones/actualizar_galpon/${id_galpon}`,
             data: {
                 capacidad: capacidad,
                 aves: num_aves
