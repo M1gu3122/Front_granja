@@ -44,7 +44,7 @@ $(document).ready(function () {
     let tabla;
 
     $.ajax({
-        url: 'http://127.0.0.1:3000/reportes/obtener_todos_los_reportes',
+        url: 'https://back-granja.vercel.app/reportes/obtener_todos_los_reportes',
         method: 'GET',
         success: function (data) {
             console.log("Datos obtenidos:", data);
