@@ -15,7 +15,7 @@ export class TaskManager {
 
         axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/tareas/obtener_tareas',
+            url: 'https://back-granja.vercel.app/tareas/obtener_tareas',
 
         }).then(function (response) {
             // console.log(response.data)
@@ -49,7 +49,7 @@ export class TaskManager {
         const id_usuario = userInfo.id;
         
 
-        axios.get(`http://127.0.0.1:3000/tareas/obtener_tareas_trabajador/${id_usuario}`, {
+        axios.get(`https://back-granja.vercel.app/tareas/obtener_tareas_trabajador/${id_usuario}`, {
             headers: {
                 'Content-Type': 'application/json',
                 // 'Authorization': `Bearer ${token}`
@@ -102,7 +102,7 @@ export class TaskManager {
         let usuario = row.cells[4].innerText; // Capturar el nombre del usuario
 
         // Hacer la solicitud GET para obtener los detalles de la tarea
-        axios.get(`http://127.0.0.1:3000/tareas/obtener_tareas_id/${id}`, {
+        axios.get(`https://back-granja.vercel.app/tareas/obtener_tareas_id/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 // 'Authorization': `Bearer ${token}` // Si usas autenticación con tokens
@@ -226,7 +226,7 @@ export class TaskManager {
             console.log(data)
             axios({
                 method: 'PUT',
-                url: `http://127.0.0.1:3000/tareas/editar_tarea/${id}`, data,
+                url: `https://back-granja.vercel.app/tareas/editar_tarea/${id}`, data,
 
 
                 headers: {
@@ -330,7 +330,7 @@ export class TaskManager {
             console.log(typeof (id_usuario))
             axios({
                 method: 'POST',
-                url: 'http://127.0.0.1:3000/tareas/agregar_tarea', data,
+                url: 'https://back-granja.vercel.app/tareas/agregar_tarea', data,
             }
             ).then(function (response) {
                 Swal.fire({
@@ -363,7 +363,7 @@ export class TaskManager {
 
         axios({
             method: 'PUT',
-            url: `http://127.0.0.1:3000/tareas/actualizar_estado/${id_tarea}`,
+            url: `https://back-granja.vercel.app/tareas/actualizar_estado/${id_tarea}`,
             data: {
 
                 estado: estado,
