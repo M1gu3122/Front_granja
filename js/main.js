@@ -2,11 +2,7 @@
 const token = localStorage.getItem("token");
 const rol = localStorage.getItem("rol");
 
-if (!token || rol !== "administrador") {
-    window.location.replace("/update_granja/html/login.html");
-    // IMPORTANTE: No sigas cargando nada
-    throw new Error("Acceso denegado: no hay token o rol inválido");
-}
+
 
 import { UserManager } from './userManagement.js';
 import { TaskManager } from './taskManagement.js';
@@ -23,7 +19,6 @@ const lotManager = new LotManager();
 const galponManager = new GalponManager();
 const utilManager = new UtilManager();
 
-// const token = localStorage.getItem("token")
 
 const userInfo = utilManager.parseJwt(token);
 
