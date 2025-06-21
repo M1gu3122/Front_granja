@@ -352,6 +352,7 @@ export class UtilManager {
 
 
     mensajeInicio(userInfo) {
+        console.log(userInfo.usuario)
         Swal.fire({
             position: "top-end",
             title: `Bienvenid@ : ${userInfo.usuario}`,
