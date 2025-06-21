@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
     galponManager.cargarGalpones();
     // userManager.cargarUsuariosBan()
     utilManager.mensajeInicio(userInfo);
+    utilManager.username(info);
+    
 });
 document.addEventListener('click', function (event) {
     // Usamos una función anónima para asegurarnos de que se pase el botón correcto
