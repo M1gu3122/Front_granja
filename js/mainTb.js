@@ -20,6 +20,7 @@ const userInfo = utilManager.parseJwt(token);
 
 
 const id_usuario = parseInt(userInfo.id); 
+const username=document.getElementById('info');
 
 const initEventListeners = () => {
     btnGuardar.addEventListener('click', taskManager.guardarEstado)
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     managementTb.cargarHuevos()
     utilManager.mensajeInicio(userInfo);
     utilManager.verificarToken(['trabajador']);
+    utilManager.username(username);
     
 
 
