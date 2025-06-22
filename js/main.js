@@ -21,6 +21,7 @@ const utilManager = new UtilManager();
 
 
 const userInfo = utilManager.parseJwt(token);
+const username=document.getElementById('info');
 
 
 
