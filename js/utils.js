@@ -510,11 +510,18 @@ export class UtilManager {
             }
         });
     };
-    username(id){
-        const utilManager = new UtilManager();
-        const userInfo = utilManager.parseJwt(token);
-        id.innerHTML = userInfo.usuario;
+  username(id) {
+    const utilManager = new UtilManager();
+    const userInfo = utilManager.parseJwt(token);
+    
+    let saludo = "Bienvenido";
+    if (userInfo.sexo === "F") {
+        saludo = "Bienvenida";
     }
+
+    id.innerHTML = `${saludo} : ${userInfo.usuario}`;
+}
+
 
 
 
