@@ -11,6 +11,7 @@ const divTablaBuscar = document.getElementById('div-buscar');
 const divTablaEditBuscar = document.getElementById('editDivBuscar');
 const formReporte = document.getElementById("form-reportes");
 const btnCerrarSesion = document.getElementById('salir');
+const username=document.getElementById('info');
 const inputs = ['edit-id-reporte', 'edit-buscar', 'edit-fecha-registro', 'edit-id-lote', 'edit-estado-general', 'edit-diagnostico', 'edit-t-prescrito', 'edit-dosis', 'edit-frecuencia-tratamiento', 'edit-fecha-inicio-tratamiento', 'edit-fecha-fin-tratamiento']
 
 const inputsVista = ['ver-id-reporte', 'ver-usuario', 'ver-fecha-registro', 'ver-id-lote', 'ver-estado-general', 'ver-diagnostico', 'ver-t-prescrito', 'ver-dosis', 'ver-frecuencia-tratamiento', 'ver-fecha-inicio-tratamiento', 'ver-fecha-fin-tratamiento']
@@ -35,6 +36,7 @@ formReporte.addEventListener("submit", (event) => {
 
 document.addEventListener('DOMContentLoaded', function () {
     reportManagement.cargarReportes();
+    utilManager.username(username);
 
 
 })
