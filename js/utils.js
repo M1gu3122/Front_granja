@@ -514,19 +514,27 @@ verificarAcceso(rolesPermitidos) {
             }
         });
     };
-  username(id) {
+ username(id) {
     const utilManager = new UtilManager();
-       const token = localStorage.getItem("token");
-      
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        console.warn("No hay token disponible");
+        // Aquí puedes redirigir si quieres
+        window.location.href = "/html/login.html";
+        return;
+    }
+
     const userInfo = utilManager.parseJwt(token);
     let saludo = "Bienvenido";
-      console.log(userInfo)
+
     if (userInfo.genero === "F") {
         saludo = "Bienvenida";
     }
 
     id.innerHTML = `${saludo} : ${userInfo.usuario}`;
 }
+
 
 
 
