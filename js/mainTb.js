@@ -16,11 +16,7 @@ const btnGuardarLote = document.getElementById("btn-guardar-lote");
 const btnGuardarGalpon = document.getElementById("btn-guardar-galpon");
 const btnCerrarSesion = document.getElementById('btn-logout');
 
-const userInfo = utilManager.parseJwt(token);
 
-
-const id_usuario = parseInt(userInfo.id); 
-const username=document.getElementById('info');
 
 const initEventListeners = () => {
     btnGuardar.addEventListener('click', taskManager.guardarEstado)
@@ -65,3 +61,9 @@ document.addEventListener('click', function (event) {
         galponManager.editarGalpon(btn);
     }
 });
+
+const userInfo = utilManager.parseJwt(token);
+
+
+const id_usuario = parseInt(userInfo.id); 
+const username=document.getElementById('info');
