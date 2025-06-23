@@ -18,7 +18,7 @@ const btnCerrarSesion = document.getElementById('btn-logout');
 if (!token) {
     console.warn("No hay token disponible, redirigiendo al login...");
     window.location.href = "/html/login.html";
-    return;
+
 }
 const userInfo = utilManager.parseJwt(token);
 
