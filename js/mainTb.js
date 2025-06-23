@@ -15,8 +15,16 @@ const btnGuardar = document.getElementById("btn-guardar");
 const btnGuardarLote = document.getElementById("btn-guardar-lote");
 const btnGuardarGalpon = document.getElementById("btn-guardar-galpon");
 const btnCerrarSesion = document.getElementById('btn-logout');
+if (!token) {
+    console.warn("No hay token disponible, redirigiendo al login...");
+    window.location.href = "/html/login.html";
+    return;
+}
+const userInfo = utilManager.parseJwt(token);
 
 
+const id_usuario = parseInt(userInfo.id); 
+const username=document.getElementById('info');
 
 const initEventListeners = () => {
     btnGuardar.addEventListener('click', taskManager.guardarEstado)
@@ -62,8 +70,4 @@ document.addEventListener('click', function (event) {
     }
 });
 
-const userInfo = utilManager.parseJwt(token);
 
-
-const id_usuario = parseInt(userInfo.id); 
-const username=document.getElementById('info');
