@@ -333,22 +333,26 @@ export class UtilManager {
     inputB(div_id) {
         div_id.classList.add("collapse")
     }
-    verificarToken(rolesPermitidos = []) {
-        const token = localStorage.getItem("token");
-        const rol = localStorage.getItem("rol");
+verificarAcceso(rolesPermitidos) {
+  const token = localStorage.getItem("token");
+  const rol = localStorage.getItem("rol");
 
-        if (!token) {
-            window.location.replace = "/html/login.html";
-            return false;
-        }
+  if (!token) {
+    window.location.href = "/html/login.html";
+    return;
+  }
 
-        if (!rolesPermitidos.includes(rol)) {
-            window.location.replace = "/html/login.html";
-            return false;
-        }
+  // El admin tiene acceso a todo
+  if (rol === "administrador") {
+    return;
+  }
 
-        return true; // Token y rol válidos
-    }
+  // Si el rol del usuario no está en los roles permitidos, lo sacamos
+  if (!rolesPermitidos.includes(rol)) {
+    window.location.href = "/html/login.html";
+  }
+}
+
 
 
     mensajeInicio(userInfo) {
