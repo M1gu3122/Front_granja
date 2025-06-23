@@ -514,6 +514,7 @@ export class UtilManager {
     const utilManager = new UtilManager();
     const userInfo = utilManager.parseJwt(token);
     let saludo = "Bienvenido";
+      console.log(userInfo)
     if (userInfo.genero === "F") {
         saludo = "Bienvenida";
     }
