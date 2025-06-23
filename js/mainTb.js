@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     galponManager.cargarGalpones()
     managementTb.cargarHuevos()
     utilManager.mensajeInicio(userInfo);
-    utilManager.verificarToken(['trabajador']);
+    utilManager.verificarAcceso(['trabajador']);
     utilManager.username(username);
     
 
