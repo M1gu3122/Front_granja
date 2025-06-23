@@ -512,6 +512,8 @@ export class UtilManager {
     };
   username(id) {
     const utilManager = new UtilManager();
+       const token = localStorage.getItem("token");
+      
     const userInfo = utilManager.parseJwt(token);
     let saludo = "Bienvenido";
       console.log(userInfo)
