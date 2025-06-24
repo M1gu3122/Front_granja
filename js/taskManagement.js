@@ -3,7 +3,10 @@ import { idUsuarioSelect, UtilManager } from "./utils.js";
 let id_tarea= null;
 const utilManager = new UtilManager();
 const token = localStorage.getItem("token")
-
+ if (!token) {
+        window.location.href = "/html/login.html";
+        return;
+    }
 const userInfo = utilManager.parseJwt(token);
 export class TaskManager {
     
