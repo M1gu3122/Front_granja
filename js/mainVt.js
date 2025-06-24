@@ -37,6 +37,7 @@ formReporte.addEventListener("submit", (event) => {
 document.addEventListener('DOMContentLoaded', function () {
     reportManagement.cargarReportes();
     utilManager.username(username);
+    utilManager.verificarAcceso(['admnistrador','veterinario'])
 
 
 })
