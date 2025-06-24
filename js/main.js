@@ -125,7 +125,7 @@ const initEventListeners = () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // utilManager.verificarToken(['administrador']);
+    utilManager.verificarAcceso(['administrador']);
     initEventListeners()
     inicializarGraficos()
     userManager.cargarUsuarios("activo");
@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
     taskManager.cargarTareas();
     lotManager.cargarLote()
     galponManager.cargarGalpones();
-    // userManager.cargarUsuariosBan()
     utilManager.mensajeInicio(userInfo);
     utilManager.username(username);
     
