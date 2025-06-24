@@ -31,15 +31,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-      <script>
-    const token = localStorage.getItem("token");
-    const rol = localStorage.getItem("rol");
-    
-    if (!token || rol !== "administrador" && rol !== "veterinario") {
-        // Si no hay token o el rol no es administrador o veterinario, redirigir al login
-      window.location.replace("/update_granja/html/login.html");
-    }
-  </script>
+     
 </head>
 
 <body>
