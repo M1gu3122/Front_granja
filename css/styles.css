@@ -1,17 +1,4 @@
 .btn-export {
   display: none;
 }
-.contenedor {
-  width: 300px;
-  height: 200px;
-  overflow: hidden;  /* Esto oculta lo que se sale del contenedor */
-}
 
-.contenedor img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* La imagen se ajusta y se recorta para cubrir el contenedor */
-  object-position: center; /* Centra la imagen */
-}
-
-  
