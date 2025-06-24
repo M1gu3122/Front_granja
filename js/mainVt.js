@@ -78,7 +78,19 @@ $(document).ready(function () {
                     { extend: 'copy', className: 'btnExport btn-export' },
                     { extend: 'csv', className: 'btnExport btn-export' },
                     { extend: 'excel', className: 'btnExport btn-export' },
-                    { extend: 'pdf', className: 'btnExport btn-export' },
+                   {
+  extend: 'pdf',
+  className: 'btnExport btn-export',
+  text: 'PDF',
+  customize: function (doc) {
+    doc.content[1].table.widths = 
+      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+  },
+  orientation: 'landscape', // <-- orientación horizontal
+  pageSize: 'A4',           // <-- tamaño de página A4 (puedes cambiar a legal si prefieres)
+  title: 'Reporte de Datos'
+},
+
                     { extend: 'print', className: 'btnExport btn-export' }
                 ],
                 language: {
