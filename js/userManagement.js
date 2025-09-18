@@ -129,7 +129,14 @@ export class UserManager {
         const usuario = document.getElementById('usuario').value.trim();
         const contraseña = document.getElementById('contraseña').value.trim();
         const rol = parseInt(document.getElementById('rol').value.trim());
-
+console.log('id_usuario:', id_usuario);
+console.log('nombre:', nombre);
+console.log('apellido:', apellido);
+console.log('edad:', edad);
+console.log('sexo:', sexo);
+console.log('usuario:', usuario);
+console.log('contraseña:', contraseña);
+console.log('rol:', rol);
 
         const camposValidacion = [
             {
@@ -234,7 +241,16 @@ export class UserManager {
         const usuario = document.getElementById('edit-usuario-username').value.trim();
         const contraseña = document.getElementById('edit-usuario-contraseña').value.trim();
         const rol = parseInt(document.getElementById('edit-usuario-rol').value.trim());
-
+console.log({
+  id,
+  nombre,
+  apellido,
+  edad,
+  sexo,
+  usuario,
+  contraseña,
+  rol
+});
 
         // const validaciones=()=>{
 
@@ -472,3 +488,4 @@ export class UserManager {
     
 
 }
+
