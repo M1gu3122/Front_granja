@@ -413,6 +413,7 @@ console.log({
 
         if (utilManager.validarCampos(validacionesUsuario)) {
             const data = {
+                id_usuario:id,
                 nombres: nombre,
                 apellidos: apellido,
                 edad: edad,
@@ -488,6 +489,7 @@ console.log({
     
 
 }
+
 
 
 
