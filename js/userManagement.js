@@ -423,7 +423,8 @@ console.log({
                 id_rol: rol
             };
             console.log(data)
-
+            console.log(id)
+            console.log(typeof(id))
 
 
             axios.put(`https://back-granja.vercel.app/user/editar_usuario/${id}`, data, {
@@ -488,4 +489,5 @@ console.log({
     
 
 }
+
 
