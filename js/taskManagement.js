@@ -138,7 +138,7 @@ export class TaskManager {
                 alert('Ocurrió un error al obtener los datos del reporte');
             });
     };
-    guardarCambiosTareas(idUsuarioSeleccionado) {
+    guardarCambiosTareas(idUsuarioSelect) {
         const taskManager = new TaskManager();
         const utilManager = new UtilManager();
 
