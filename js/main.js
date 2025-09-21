@@ -150,7 +150,7 @@ document.addEventListener('click', function (event) {
     const btn = event.target.closest('.btn-editar-tareas');
     if (btn) {
         // Llamamos a editarUsuarios con el botón correcto
-        taskManager.editarTareas(btn, idUsuarioSeleccionado);
+        taskManager.editarTareas(btn, idUsuarioSelect);
     }
 });
 document.addEventListener('click', function (event) {
