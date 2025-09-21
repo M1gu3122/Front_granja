@@ -281,7 +281,7 @@ export class UserManager {
 
         if (utilManager.validarCampos(validacionesUsuario)) {
             const data = {
-                id_usuario: id_rol,
+                id_usuario: id_usuario,
                 nombres: nombres,
                 apellidos: apellidos,
                 usuario: usuario,
