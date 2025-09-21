@@ -129,14 +129,14 @@ export class UserManager {
         const usuario = document.getElementById('usuario').value.trim();
         const contraseña = document.getElementById('contraseña').value.trim();
         const rol = parseInt(document.getElementById('rol').value.trim());
-console.log('id_usuario:', id_usuario);
-console.log('nombre:', nombre);
-console.log('apellido:', apellido);
-console.log('edad:', edad);
-console.log('sexo:', sexo);
-console.log('usuario:', usuario);
-console.log('contraseña:', contraseña);
-console.log('rol:', rol);
+        console.log('id_usuario:', id_usuario);
+        console.log('nombre:', nombre);
+        console.log('apellido:', apellido);
+        console.log('edad:', edad);
+        console.log('sexo:', sexo);
+        console.log('usuario:', usuario);
+        console.log('contraseña:', contraseña);
+        console.log('rol:', rol);
 
         const camposValidacion = [
             {
@@ -158,7 +158,7 @@ console.log('rol:', rol);
                 validar: valor => !isNaN(valor) && valor > 0 && valor <= 90
             },
             {
-                id: "lblgenero", 
+                id: "lblgenero",
                 alertaId: "alert-sexo",
                 mensaje: "Seleccione un género",
                 obtenerValor: () => {
@@ -229,7 +229,7 @@ console.log('rol:', rol);
         }
 
     }
-  
+
     guardarCambiosUsuarios() {
         const userManager = new UserManager();
         const utilManager = new UtilManager()
@@ -241,16 +241,6 @@ console.log('rol:', rol);
         const usuario = document.getElementById('edit-usuario-username').value.trim();
         const contraseña = document.getElementById('edit-usuario-contraseña').value.trim();
         const rol = parseInt(document.getElementById('edit-usuario-rol').value.trim());
-console.log({
-  id,
-  nombre,
-  apellido,
-  edad,
-  sexo,
-  usuario,
-  contraseña,
-  rol
-});
 
         const validacionesUsuario = [
             {
@@ -271,7 +261,7 @@ console.log({
                 mensaje: "Ingrese una edad válida (1-90)",
                 validar: valor => !isNaN(valor) && valor > 0 && valor <= 90
             },
-   
+
 
             {
                 id: "edit-usuario-username",
@@ -285,7 +275,7 @@ console.log({
                 mensaje: "La contraseña debe contar entre 8 y 30 caracteres y solo letras/números",
                 validar: valor => /^[a-zA-Z0-9]{8,30}$/.test(valor)
             }
-        
+
         ];
 
 
@@ -299,14 +289,31 @@ console.log({
                 id_rol: parseInt(rol),
                 edad: parseInt(edad),
                 sexo: sexo,
-             
-               
-                
-               
+
+
+
+
             };
-            console.log(data)
-            console.log(id)
-            console.log(typeof(id))
+            console.log({
+                id,
+                nombre,
+                apellido,
+                edad,
+                sexo,
+                usuario,
+                contraseña,
+                rol
+            });
+            console.log(typeof id);
+            console.log(typeof nombre);
+            console.log(typeof apellido);
+            console.log(typeof edad);
+            console.log(typeof sexo);
+            console.log(typeof usuario);
+            console.log(typeof contraseña);
+            console.log(typeof rol);
+           
+
 
 
             axios.put(`https://back-granja.vercel.app/user/editar_usuario/${id}`, data, {
@@ -368,7 +375,7 @@ console.log({
         }
     }
 
-    
+
 
 }
 
