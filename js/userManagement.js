@@ -252,111 +252,6 @@ console.log({
   rol
 });
 
-        // const validaciones=()=>{
-
-        //     if (!nombre || !apellido || !edad || !sexo || !id || !usuario || !contraseña || !rol) {
-        //         Swal.fire({
-        //             title: "Debes completar todos los campos!",
-        //             icon: "warning"
-        //         });
-        //         return;
-        //     }
-
-
-        //     // Validar nombre y apellido (solo letras y espacios)
-        //     const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-        //     if (!nameRegex.test(nombre)) {
-        //         crearAlert('edit-nombre-usuario', 'alert-nom', 'El nombre debe contener solo letras');
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-nom");
-        //         }, 3000);
-        //         return;
-        //     }
-        //     if (!nameRegex.test(apellido)) {
-
-        //         crearAlert('edit-apellido-usuario', 'alert-apellido', 'El apellido debe contener solo letras')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-apellido");
-        //         }, 3000);
-        //         return;
-
-        //     }
-        //     if (edad > 90) {
-        //         crearAlert('edit-edad-usuario', 'alert-edad', 'Ingrese una edad valida')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-edad");
-        //         }, 3000);
-        //         return;
-        //     }
-
-        //     // Validar edad (debe ser un número positivo)
-        //     if (isNaN(edad) || edad < 0) {
-        //         crearAlert('edit-edad-usuario', 'alert-edad', 'Ingrese una edad valida')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-edad");
-        //         }, 3000);
-        //         return;
-
-        //     }
-        //     if (sexo == null) {
-        //         crearAlert('edit-sexo-usuario', 'alert-sexo', 'Seleccione un genero')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-sexo");
-        //         }, 3000);
-        //         return;
-
-        //     }
-
-        //     // Validar cédula (solo números y positivos)
-        //     if (isNaN(id) || id < 0) {
-        //         crearAlert('edit-id-usuario', 'alert-id', 'Ingrese un número de cédula valido')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-id");
-        //         }, 3000);
-        //         return;
-
-        //     }
-
-        //     // Validar usuario (solo letras y números, longitud entre 6 y 20 caracteres)
-        //     if (usuario.length < 3 || usuario.length > 20) {
-        //         crearAlert('edit-usuario-usuario', 'alert-usuario', 'El usuario debe contar entre 3 y 20 caracteres')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-usuario");
-        //         }, 3000);
-        //         return;
-
-        //     }
-        //     const usuarioRegex = /^[a-zA-Z0-9]+$/; // Solo letras y números
-        //     if (!usuarioRegex.test(usuario)) {
-        //         crearAlert('edit-usuario-usuario', 'alert-usuario', 'El usuario solo puede contener letras y números')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-usuario");
-        //         }, 3000);
-        //         return;
-
-        //     }
-
-        //     // Validar contraseña (solo letras y números, longitud entre 8 y 30 caracteres)
-        //     if (contraseña.length < 8 || contraseña.length > 30) {
-        //         crearAlert('edit-contraseña-usuario', 'alert-contraseña', 'La contraseña debe contar entre 8 y 30 caracteres')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-contraseña");
-        //         }, 3000);
-        //         return;
-
-        //     }
-        //     const passwordRegex = /^[a-zA-Z0-9]+$/; // Solo letras y números
-        //     if (!passwordRegex.test(contraseña)) {
-        //         crearAlert('edit-contraseña-usuario', 'alert-contraseña', 'La contraseña debe contar entre 8 y 30 caracteres')
-        //         setTimeout(() => {
-        //             ocultarAlert("alert-contraseña");
-        //         }, 3000);
-        //         return;
-
-
-        //     }
-
-        // }
         const validacionesUsuario = [
             {
                 id: "edit-nombre-usuario",
@@ -376,12 +271,7 @@ console.log({
                 mensaje: "Ingrese una edad válida (1-90)",
                 validar: valor => !isNaN(valor) && valor > 0 && valor <= 90
             },
-            // {
-            //     id: "edit-id-usuario",
-            //     alertaId: "alert-id",
-            //     mensaje: "Ingrese un número de cédula válido",
-            //     validar: valor => !isNaN(valor) && valor > 0
-            // }
+   
 
             {
                 id: "edit-usuario-username",
@@ -395,19 +285,7 @@ console.log({
                 mensaje: "La contraseña debe contar entre 8 y 30 caracteres y solo letras/números",
                 validar: valor => /^[a-zA-Z0-9]{8,30}$/.test(valor)
             }
-            // {
-            //     id: "grupo-sexo", // ID del contenedor para mostrar la alerta
-            //     alertaId: "alert-sexo", // ID único para la alerta
-            //     mensaje: "Seleccione un género",
-            //     obtenerValor: () => {
-            //         const radios = document.querySelectorAll('input[name="edit-sexo-usuario"]');
-            //         const seleccionado = [...radios].find(r => r.checked);
-            //         return seleccionado ? seleccionado.value : "";
-            //     },
-            //     validar: valor => valor !== ""
-            // }
-
-
+        
         ];
 
 
@@ -491,6 +369,7 @@ console.log({
     
 
 }
+
 
 
 
