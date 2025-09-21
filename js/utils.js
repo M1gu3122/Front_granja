@@ -322,6 +322,7 @@ export class UtilManager {
         const fila = elemento.parentNode.parentNode;
         const idUsuario = fila.cells[0].textContent;
         idUsuarioSelect = idUsuario;
+        console.log(idUsuarioSelect)
 
         // console.log('ID de usuario seleccionado:', idUsuarioSeleccionado);
         div_tabla.classList.add("collapse")
