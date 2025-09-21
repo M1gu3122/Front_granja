@@ -416,11 +416,14 @@ console.log({
                 // id_usuario:id,
                 nombres: nombre,
                 apellidos: apellido,
-                edad: edad,
-                sexo: sexo,
                 usuario: usuario,
                 contraseña: contraseña,
-                id_rol: rol
+                id_rol: rol,
+                edad: edad,
+                sexo: sexo,
+               
+                
+               
             };
             console.log(data)
             console.log(id)
@@ -489,6 +492,7 @@ console.log({
     
 
 }
+
 
 
 
