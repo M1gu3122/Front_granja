@@ -291,7 +291,7 @@ console.log({
 
         if (utilManager.validarCampos(validacionesUsuario)) {
             const data = {
-                id_usuario: id,
+               
                 nombres: nombre,
                 apellidos: apellido,
                 usuario: usuario,
