@@ -125,8 +125,8 @@ export class TaskManager {
                     document.getElementById('edit-descripcion').value = report.descripcion;
                     document.getElementById('edit-fecha_asignacion').value = report.fecha_asignacion;
                     document.getElementById('edit-buscar').value = usuario;
-                    idUsuarioSeleccionado = report.id_usuario
-                    document.getElementById('alert').value = idUsuarioSeleccionado;
+                    idUsuarioSelect = report.id_usuario
+                    document.getElementById('alert').value =idUsuarioSelect;
 
 
                 } else {
