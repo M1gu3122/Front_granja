@@ -8,7 +8,7 @@ import { UserManager } from './userManagement.js';
 import { TaskManager } from './taskManagement.js';
 import { LotManager } from './lotManagement.js';
 import { GalponManager } from './galponManagement.js';
-import { UtilManager } from './utils.js'
+import { idUsuarioSelect, UtilManager } from './utils.js'
 import { idUsuarioSeleccionado } from './utils.js';
 import { inicializarGraficos } from './chart.js'
 console.log(idUsuarioSeleccionado)
@@ -93,7 +93,7 @@ const initEventListeners = () => {
     const formAdd = document.getElementById("formAdd");
     formAdd.addEventListener("submit", userManager.agregarUsuarios);
 
-    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSeleccionado));
+    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSelect));
     btnGuardarCambioslote.addEventListener("click", lotManager.guardarCambiosLote)
     btnGuardarCambiosGalpon.addEventListener("click", galponManager.guardarCambiosGalpon)
     btnBuscar.addEventListener('click', () => utilManager.buscarUsuario(inputBuscar, "spinner", idTablaBuscar, "tabla-buscar", "2"));
