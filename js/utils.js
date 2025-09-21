@@ -324,9 +324,12 @@ export class UtilManager {
         idUsuarioSelect = idUsuario;
         console.log(idUsuarioSelect)
 
+
+
         // console.log('ID de usuario seleccionado:', idUsuarioSeleccionado);
         div_tabla.classList.add("collapse")
-        return console.log("usuario seleccionado " + idUsuarioSeleccionado)
+        return console.log("usuario seleccionado " + idUsuarioSelect)
+        
 
     }
 
