@@ -230,20 +230,33 @@
 
 
                                 <div class="row mb-3">
+                                    <div>
+                                        <label for="edit-cc-usuario" class="form-label">CC</label>
+                                        <input type="text" class="form-control" id="edit-cc-usuario">
+                                    </div>
                                     <div class="col-md-6">
                                         <label for="edit-nombre-usuario" class="form-label">Nombre</label>
                                         <input type="text" class="form-control" id="edit-nombre-usuario">
                                     </div>
-                                    <div class="col-md-6">
+                                   
+                                </div>
+
+                                <div class="row mb-3">
+                                     <div class="col-md-6">
                                         <label for="edit-apellido-usuario" class="form-label">Apellido</label>
                                         <input type="text" class="form-control" id="edit-apellido-usuario">
                                     </div>
+                                    <div class="col-md-6">
+                                        <label for="edit-edad-usuario" class="form-label">Edad</label>
+                                        <input type="text" class="form-control" id="edit-edad-usuario">
+                                    </div>
+                                    
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-md-6">
-                                        <label for="edit-edad-usuario" class="form-label">Edad</label>
-                                        <input type="text" class="form-control" id="edit-edad-usuario">
+                                        <label for="edit-usuario-username" class="form-label">Usuario</label>
+                                        <input type="text" class="form-control" id="edit-usuario-username">
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label mx-1">Sexo</label>
@@ -260,12 +273,16 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
-
                                 <div class="row mb-3">
                                     <div class="col-md-6">
-                                        <label for="edit-usuario-username" class="form-label">Usuario</label>
-                                        <input type="text" class="form-control" id="edit-usuario-username">
+                                        <label for="edit-usuario-rol" class="form-label">Id Rol</label>
+                                        <select class="form-control" id="edit-usuario-rol">
+                                            <option value="1">Administrador</option>
+                                            <option value="2">Trabajador</option>
+                                            <option value="3">Veterinario</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="edit-usuario-contraseña" class="form-label">Contraseña</label>
@@ -277,16 +294,6 @@
 
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="edit-usuario-rol" class="form-label">Id Rol</label>
-                                        <select class="form-control" id="edit-usuario-rol">
-                                            <option value="1">Administrador</option>
-                                            <option value="2">Trabajador</option>
-                                            <option value="3">Veterinario</option>
-                                        </select>
-                                    </div>
-                                </div>
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
@@ -294,6 +301,7 @@
                                     <button type="button" class="btn btn-success" id="btn-save-changes">Guardar
                                         cambios</button>
                                 </div>
+                                
 
                             </form>
                         </div>
