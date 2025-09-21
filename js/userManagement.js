@@ -413,7 +413,6 @@ console.log({
 
         if (utilManager.validarCampos(validacionesUsuario)) {
             const data = {
-                id_usuario:parseInt(id),
                 nombres: nombre,
                 apellidos: apellido,
                 usuario: usuario,
@@ -492,6 +491,7 @@ console.log({
     
 
 }
+
 
 
 
