@@ -233,14 +233,14 @@ export class UserManager {
     guardarCambiosUsuarios() {
         const userManager = new UserManager();
         const utilManager = new UtilManager()
-        const id = parseInt(document.getElementById('edit-id-usuario').value.trim())
-        const nombre = document.getElementById('edit-nombre-usuario').value.trim();
-        const apellido = document.getElementById('edit-apellido-usuario').value.trim();
+        const id_usuario = parseInt(document.getElementById('edit-id-usuario').value.trim())
+        const nombres = document.getElementById('edit-nombre-usuario').value.trim();
+        const apellidos = document.getElementById('edit-apellido-usuario').value.trim();
         const edad = parseInt(document.getElementById('edit-edad-usuario').value.trim());
         const sexo = document.querySelector('input[name="edit-sexo-usuario"]:checked').value;
         const usuario = document.getElementById('edit-usuario-username').value.trim();
         const contraseña = document.getElementById('edit-usuario-contraseña').value.trim();
-        const rol = parseInt(document.getElementById('edit-usuario-rol').value.trim());
+        const id_rol = parseInt(document.getElementById('edit-usuario-rol').value.trim());
 
         const validacionesUsuario = [
             {
@@ -281,12 +281,12 @@ export class UserManager {
 
         if (utilManager.validarCampos(validacionesUsuario)) {
             const data = {
-                id_usuario: id,
-                nombres: nombre,
-                apellidos: apellido,
+                id_usuario: id_rol,
+                nombres: nombres,
+                apellidos: apellidos,
                 usuario: usuario,
                 contraseña: contraseña,
-                id_rol: parseInt(rol),
+                id_rol: parseInt(id_rol),
                 edad: parseInt(edad),
                 sexo: sexo,
 
@@ -295,23 +295,23 @@ export class UserManager {
 
             };
             console.log({
-                id,
-                nombre,
-                apellido,
+                id_rol,
+                nombres,
+                apellidos,
                 edad,
                 sexo,
                 usuario,
                 contraseña,
-                rol
+                id_rol
             });
-            console.log(typeof id);
-            console.log(typeof nombre);
-            console.log(typeof apellido);
+            console.log(typeof id_rol);
+            console.log(typeof nombres);
+            console.log(typeof apellidos);
             console.log(typeof edad);
             console.log(typeof sexo);
             console.log(typeof usuario);
             console.log(typeof contraseña);
-            console.log(typeof rol);
+            console.log(typeof id_rol);
            
 
 
