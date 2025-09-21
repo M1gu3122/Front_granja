@@ -97,7 +97,7 @@ export class TaskManager {
                 console.error('Error:', error);
             });
     }
-    editarTareas(button, idUsuarioSeleccionado) {
+    editarTareas(button, idUsuarioSelect) {
         // Obtener la fila correspondiente al botón clicado
         const row = button.parentNode.parentNode;
         let fila_id_tareas = row.cells[0].innerText; // Capturar el ID de la tarea
