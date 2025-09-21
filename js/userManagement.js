@@ -316,7 +316,7 @@ export class UserManager {
 
 
 
-            axios.put(`https://back-granja.vercel.app/user/editar_usuario/${id_rol}`, data, {
+            axios.put(`https://back-granja.vercel.app/user/editar_usuario/${id_usuario}`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                     // 'Authorization': `Bearer ${token}`
