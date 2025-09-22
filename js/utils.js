@@ -219,6 +219,7 @@ export class UtilManager {
         try {
             const response = axios.get(`https://back-granja.vercel.app/user/buscar_usuario_tb/${busqueda}`);
             const userData = response.data;
+            console.log(userData)
 
             if (userData.informacion === 'Usuario no encontrado') {
                 alert('Usuario no encontrado');
