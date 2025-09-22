@@ -148,7 +148,8 @@ export class TaskManager {
         const fecha_asignacion = document.getElementById('edit-fecha_asignacion').value;
         const estado = document.getElementById('edit-estado').value;
         const id_usuario = idUsuarioSeleccionado
-        // console.log(id_usuario)
+
+        console.log("este es el usuario selecionado para tareas", idUsuarioSeleccionado)
 
         // console.log(id, descripcion, fecha_asignacion, estado, id_usuario)
 
