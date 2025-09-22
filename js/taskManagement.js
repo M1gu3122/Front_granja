@@ -148,6 +148,7 @@ export class TaskManager {
         const fecha_asignacion = document.getElementById('edit-fecha_asignacion').value;
         const estado = document.getElementById('edit-estado').value;
         const id_usuario = document.getElementById('alert').value;
+        console.log(id_usuario)
 
         // console.log(id, descripcion, fecha_asignacion, estado, id_usuario)
 
@@ -224,7 +225,7 @@ export class TaskManager {
                 descripcion: descripcion,
                 fecha_asignacion: fecha_asignacion,
                 estado: estado,
-                id_usuario: id_usuario
+                id_usuario: idUsuarioSeleccionado
             }
             console.log(data)
             axios({
