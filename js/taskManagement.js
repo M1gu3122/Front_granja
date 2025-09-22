@@ -1,5 +1,5 @@
 // Gestión de tareas 
-import { idUsuarioSelect, UtilManager } from "./utils.js";
+import { UtilManager } from "./utils.js";
 let id_tarea= null;
 const utilManager = new UtilManager();
 const token = localStorage.getItem("token")
@@ -147,8 +147,8 @@ export class TaskManager {
         const descripcion = document.getElementById('edit-descripcion').value;
         const fecha_asignacion = document.getElementById('edit-fecha_asignacion').value;
         const estado = document.getElementById('edit-estado').value;
-        const id_usuario = document.getElementById('alert').value;
-        console.log(id_usuario)
+        const id_usuario = idUsuarioSeleccionado
+        // console.log(id_usuario)
 
         // console.log(id, descripcion, fecha_asignacion, estado, id_usuario)
 
