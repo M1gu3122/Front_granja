@@ -3,7 +3,7 @@ const token = localStorage.getItem("token");
 const rol = localStorage.getItem("rol");
 
 
-
+import { idUsuarioSelect } from './utils.js';
 import { UserManager } from './userManagement.js';
 import { TaskManager } from './taskManagement.js';
 import { LotManager } from './lotManagement.js';
@@ -93,7 +93,7 @@ const initEventListeners = () => {
     const formAdd = document.getElementById("formAdd");
     formAdd.addEventListener("submit", userManager.agregarUsuarios);
 
-    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSeleccionado));
+    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSelect));
     btnGuardarCambioslote.addEventListener("click", lotManager.guardarCambiosLote)
     btnGuardarCambiosGalpon.addEventListener("click", galponManager.guardarCambiosGalpon)
     btnBuscar.addEventListener('click', () => utilManager.buscarUsuario(inputBuscar, "spinner", idTablaBuscar, "tabla-buscar", "2"));
