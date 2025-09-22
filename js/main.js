@@ -93,7 +93,7 @@ const initEventListeners = () => {
     const formAdd = document.getElementById("formAdd");
     formAdd.addEventListener("submit", userManager.agregarUsuarios);
 
-    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(window.idUsuarioSeleccionado));
+    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSeleccionado));
     btnGuardarCambioslote.addEventListener("click", lotManager.guardarCambiosLote)
     btnGuardarCambiosGalpon.addEventListener("click", galponManager.guardarCambiosGalpon)
     btnBuscar.addEventListener('click', () => utilManager.buscarUsuario(inputBuscar, "spinner", idTablaBuscar, "tabla-buscar", "2"));
@@ -150,7 +150,7 @@ document.addEventListener('click', function (event) {
     const btn = event.target.closest('.btn-editar-tareas');
     if (btn) {
         // Llamamos a editarUsuarios con el botón correcto
-        taskManager.editarTareas(btn, window.idUsuarioSeleccionado);
+        taskManager.editarTareas(btn, idUsuarioSeleccionado);
     }
 });
 document.addEventListener('click', function (event) {

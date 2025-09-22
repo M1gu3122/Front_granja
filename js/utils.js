@@ -3,7 +3,7 @@
 import { UserManager } from "./userManagement.js";
 
 export let idUsuarioSeleccionado;
-window.idUsuarioSelect = null;
+export let idUsuarioSelect = null;
 export class UtilManager {
     selectAllChecks(clase, checkMaestro) {
 
@@ -321,7 +321,7 @@ export class UtilManager {
         // const tablaBuscar = document.getElementById("cont-tabla");
         const fila = elemento.parentNode.parentNode;
         const idUsuario = fila.cells[0].textContent;
-        window.idUsuarioSelect = idUsuario;
+        idUsuarioSelect = idUsuario;
 
         // console.log('ID de usuario seleccionado:', idUsuarioSeleccionado);
         div_tabla.classList.add("collapse")
