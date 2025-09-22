@@ -8,7 +8,7 @@ import { UserManager } from './userManagement.js';
 import { TaskManager } from './taskManagement.js';
 import { LotManager } from './lotManagement.js';
 import { GalponManager } from './galponManagement.js';
-import { idUsuarioSelect, UtilManager } from './utils.js'
+import { UtilManager } from './utils.js'
 import { idUsuarioSeleccionado } from './utils.js';
 import { inicializarGraficos } from './chart.js'
 console.log(idUsuarioSeleccionado)
@@ -93,7 +93,7 @@ const initEventListeners = () => {
     const formAdd = document.getElementById("formAdd");
     formAdd.addEventListener("submit", userManager.agregarUsuarios);
 
-    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(idUsuarioSelect));
+    btnGuardarCambiosEdit.addEventListener("click", () => taskManager.guardarCambiosTareas(window.idUsuarioSeleccionado));
     btnGuardarCambioslote.addEventListener("click", lotManager.guardarCambiosLote)
     btnGuardarCambiosGalpon.addEventListener("click", galponManager.guardarCambiosGalpon)
     btnBuscar.addEventListener('click', () => utilManager.buscarUsuario(inputBuscar, "spinner", idTablaBuscar, "tabla-buscar", "2"));
@@ -150,7 +150,7 @@ document.addEventListener('click', function (event) {
     const btn = event.target.closest('.btn-editar-tareas');
     if (btn) {
         // Llamamos a editarUsuarios con el botón correcto
-        taskManager.editarTareas(btn, idUsuarioSelect);
+        taskManager.editarTareas(btn, window.idUsuarioSeleccionado);
     }
 });
 document.addEventListener('click', function (event) {

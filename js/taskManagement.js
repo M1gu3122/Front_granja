@@ -97,7 +97,7 @@ export class TaskManager {
                 console.error('Error:', error);
             });
     }
-    editarTareas(button, idUsuarioSelect) {
+    editarTareas(button, idUsuarioSeleccionado) {
         // Obtener la fila correspondiente al botón clicado
         const row = button.parentNode.parentNode;
         let fila_id_tareas = row.cells[0].innerText; // Capturar el ID de la tarea
@@ -125,8 +125,8 @@ export class TaskManager {
                     document.getElementById('edit-descripcion').value = report.descripcion;
                     document.getElementById('edit-fecha_asignacion').value = report.fecha_asignacion;
                     document.getElementById('edit-buscar').value = usuario;
-                    idUsuarioSelect = report.id_usuario
-                    document.getElementById('alert').value =idUsuarioSelect;
+                    idUsuarioSeleccionado = report.id_usuario
+                    document.getElementById('alert').value = idUsuarioSeleccionado;
 
 
                 } else {
@@ -138,7 +138,7 @@ export class TaskManager {
                 alert('Ocurrió un error al obtener los datos del reporte');
             });
     };
-    guardarCambiosTareas(idUsuarioSelect) {
+    guardarCambiosTareas(idUsuarioSeleccionado) {
         const taskManager = new TaskManager();
         const utilManager = new UtilManager();
 
