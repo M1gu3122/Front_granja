@@ -225,7 +225,7 @@ export class TaskManager {
                 descripcion: descripcion,
                 fecha_asignacion: fecha_asignacion,
                 estado: estado,
-                id_usuario: idUsuarioSeleccionado
+                id_usuario: id_usuario
             }
             console.log(data)
             axios({
