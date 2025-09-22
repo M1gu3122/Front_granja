@@ -222,12 +222,25 @@ export class UtilManager {
             console.log(userData)
 
             if (userData.informacion === 'Usuario no encontrado') {
-                alert('Usuario no encontrado');
+                const tbody = tablaBuscar.querySelector('tbody');
+                tbody.innerHTML = '';
+
+                userData.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+            <td>${user.id_usuario}</td>
+            <td>${user.nombres}</td>
+            <td>${user.apellidos}</td>                
+            <td><a onclick="editSeleccionar(this)" class="btn btn-success">Seleccionar</a> </td>
+          `;
+                    tbody.appendChild(row);
+                });
+                initDataTable("#tabla-edit-buscar", dataTableOptionsTablaEditBuscar);
             } else {
 
 
 
-                const tablaBuscar = document.getElementById('div-edit-buscar');
+                // const tablaBuscar = document.getElementById('div-edit-buscar');
                 const tbody = tablaBuscar.querySelector('tbody');
                 tbody.innerHTML = '';
 
@@ -334,25 +347,25 @@ export class UtilManager {
     inputB(div_id) {
         div_id.classList.add("collapse")
     }
-verificarAcceso(rolesPermitidos) {
-  const token = localStorage.getItem("token");
-  const rol = localStorage.getItem("rol");
+    verificarAcceso(rolesPermitidos) {
+        const token = localStorage.getItem("token");
+        const rol = localStorage.getItem("rol");
 
-  if (!token) {
-    window.location.href = "/html/login.html";
-    return;
-  }
+        if (!token) {
+            window.location.href = "/html/login.html";
+            return;
+        }
 
-  // El admin tiene acceso a todo
-  if (rol === "administrador") {
-    return;
-  }
+        // El admin tiene acceso a todo
+        if (rol === "administrador") {
+            return;
+        }
 
-  // Si el rol del usuario no está en los roles permitidos, lo sacamos
-  if (!rolesPermitidos.includes(rol)) {
-    window.location.href = "/html/login.html";
-  }
-}
+        // Si el rol del usuario no está en los roles permitidos, lo sacamos
+        if (!rolesPermitidos.includes(rol)) {
+            window.location.href = "/html/login.html";
+        }
+    }
 
 
 
@@ -515,26 +528,26 @@ verificarAcceso(rolesPermitidos) {
             }
         });
     };
- username(id) {
-    const utilManager = new UtilManager();
-    const token = localStorage.getItem("token");
+    username(id) {
+        const utilManager = new UtilManager();
+        const token = localStorage.getItem("token");
 
-    if (!token) {
-        console.warn("No hay token disponible");
-        // Aquí puedes redirigir si quieres
-        window.location.href = "/html/login.html";
-        return;
+        if (!token) {
+            console.warn("No hay token disponible");
+            // Aquí puedes redirigir si quieres
+            window.location.href = "/html/login.html";
+            return;
+        }
+
+        const userInfo = utilManager.parseJwt(token);
+        let saludo = "Bienvenido";
+
+        if (userInfo.genero === "F") {
+            saludo = "Bienvenida";
+        }
+
+        id.innerHTML = `${saludo} : ${userInfo.usuario}`;
     }
-
-    const userInfo = utilManager.parseJwt(token);
-    let saludo = "Bienvenido";
-
-    if (userInfo.genero === "F") {
-        saludo = "Bienvenida";
-    }
-
-    id.innerHTML = `${saludo} : ${userInfo.usuario}`;
-}
 
 
 
